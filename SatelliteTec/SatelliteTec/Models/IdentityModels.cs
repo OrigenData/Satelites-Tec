@@ -29,5 +29,13 @@ namespace SatelliteTec.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<SatelliteTec.Models.Visit> Visits { get; set; }
+
+        public System.Data.Entity.DbSet<SatelliteTec.Models.Supplier> Suppliers { get; set; }
+
+        public System.Data.Entity.DbSet<SatelliteTec.Models.Product> Products { get; set; }
+
+        public System.Data.Entity.DbSet<SatelliteTec.Models.Almacen> Almacens { get; set; }
     }
 }

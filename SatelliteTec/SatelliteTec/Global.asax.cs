@@ -1,3 +1,4 @@
+using SatelliteTec.Clase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,16 @@ namespace SatelliteTec
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            this.CheckRoles();
+            Utilities.CheckSuperUser();
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+        private void CheckRoles()
+        {
+            Utilities.CheckRoles("Admin");
+            Utilities.CheckRoles("Technical");
+            Utilities.CheckRoles("Logistic");
+            Utilities.CheckRoles("Supplier");
         }
     }
 }
