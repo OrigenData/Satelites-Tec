@@ -11,7 +11,7 @@ namespace SatelliteTec.Models
     public class ApplicationUser : IdentityUser
     {
         [Display(Name ="Estado")]
-        [Required]
+        
         public string State { get; set; }
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
