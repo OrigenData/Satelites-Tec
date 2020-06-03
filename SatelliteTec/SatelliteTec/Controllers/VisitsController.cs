@@ -10,6 +10,7 @@ using SatelliteTec.Models;
 
 namespace SatelliteTec.Controllers
 {
+    [Authorize]
     public class VisitsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
