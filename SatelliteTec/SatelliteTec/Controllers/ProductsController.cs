@@ -10,6 +10,7 @@ using SatelliteTec.Models;
 
 namespace SatelliteTec.Controllers
 {
+    [Authorize]
     public class ProductsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
