@@ -42,9 +42,10 @@
                             @Html.DisplayFor(modelItem => item.Activo)
                         </td>
                         <td>
-                            <button onclick="location.href='@Url.Action("Edit", "Products",  new { id = item.Id })'" type="button" class="btn btn-dark fas fa-file-alt fa-sm"> Editar</button> |
-                            <button onclick="location.href='@Url.Action("Details", "Products",  new { id = item.Id })'" type="button" class="btn btn-warning fas fa-info-circle fa-sm"> Detalles</button> |
-                            <button onclick="location.href='@Url.Action("Delete", "Products",  new { id = item.Id })'" type="button" class="btn btn-danger fas fa-trash fa-sm"> Eliminar</button>
+                            <button onclick="location.href='@Url.Action("Edit", "Products",  new { id = item.Id })'" type="button" class="btn btn-dark"><i class="fas fa-file-alt fa-sm"></i> Editar</button> |
+                            <button onclick="location.href='@Url.Action("Details", "Products",  new { id = item.Id })'" type="button" class="btn btn-warning"><i class="fas fa-info-circle fa-sm"></i> Detalles</button> |
+                            <button onclick="location.href='@Url.Action("Delete", "Products",  new { id = item.Id })'" type="button" class="btn btn-danger"><i class="fas fa-trash fa-sm"></i> Eliminar</button>
+                        
                         </td>
                     </tr>
                 }
