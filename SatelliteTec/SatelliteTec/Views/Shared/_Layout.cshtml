@@ -1,11 +1,13 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
     @Styles.Render("~/Content/css")
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
@@ -27,7 +29,9 @@
                 </li>
     
             </ul>
-            @Html.Partial("_LoginPartial")
+ 
+                @Html.Partial("_LoginPartial")
+
         </div>
     </nav>
 

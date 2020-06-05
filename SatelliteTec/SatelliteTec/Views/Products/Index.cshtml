@@ -1,39 +1,59 @@
 ﻿@model IEnumerable<SatelliteTec.Models.Product>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Inicio Productos";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Serie)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Activo)
-        </th>
-        <th></th>
-    </tr>
+<div style="margin-top: 50px">
+    <div class="shadow p-3 mb-5 bg-white rounded">
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Serie)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Activo)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+        <h2 style="text-align: center">@ViewBag.Title</h2>
 
-</table>
+    </div>
+
+
+    <div class="shadow p-3 mb-5 bg-white rounded">
+        <p>
+            <label title="click here" alt="sss" style="cursor: pointer; color: #007bff" class="fas fa-plus-circle fa-lg" onclick="location.href='@Url.Action("Create", "Products")'"> Crear Nuevo </label>
+        </p>
+
+
+        <table class="table">
+            <thead class="bg-primary" style="color: #ffffff">
+                <tr>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.Serie)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.Activo)
+                    </th>
+                    <th scope="col" class="col-md-5">Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Serie)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Activo)
+                        </td>
+                        <td>
+                            <button onclick="location.href='@Url.Action("Edit", "Products",  new { id = item.Id })'" type="button" class="btn btn-dark fas fa-file-alt fa-sm"> Editar</button> |
+                            <button onclick="location.href='@Url.Action("Details", "Products",  new { id = item.Id })'" type="button" class="btn btn-warning fas fa-info-circle fa-sm"> Detalles</button> |
+                            <button onclick="location.href='@Url.Action("Delete", "Products",  new { id = item.Id })'" type="button" class="btn btn-danger fas fa-trash fa-sm"> Eliminar</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+    </div>
+
+</div>
+
+
