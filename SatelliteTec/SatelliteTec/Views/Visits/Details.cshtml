@@ -1,42 +1,63 @@
 ﻿@model SatelliteTec.Models.Visit
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalles de Visita";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Visit</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Fecha)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Fecha)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ConsultType)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ConsultType)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Descripcion)
-        </dt>
+<div style="margin-top: 50px">
+    <div class="shadow p-3 mb-5 bg-white rounded">
 
-        <dd>
-            @Html.DisplayFor(model => model.Descripcion)
-        </dd>
+        <h2 style="text-align: center">@ViewBag.Title</h2>
 
-    </dl>
+    </div>
+
+
+    <div class="card">
+        <h5 class="card-header">
+
+            <label style="cursor: pointer;" onclick="location.href='@Url.Action("Index", "Visits")'"><i class="far fa-hand-point-left fa-lg"></i> Regresar a la Lista</label>
+        </h5>
+        <div class="card-body">
+            <h5 class="card-title">Puede ver cualquier dato</h5>
+
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Fecha)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Fecha)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ConsultType)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ConsultType)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Descripcion)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Descripcion)
+                </dd>
+
+
+            </dl>
+
+            <button onclick="location.href='@Url.Action("Edit", "Visits",  new { id = Model.Id })'" type="button" class="btn btn-dark"><i class="fas fa-file-alt fa-sm"></i> Editar</button>
+
+
+        </div>
+    </div>
+
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
