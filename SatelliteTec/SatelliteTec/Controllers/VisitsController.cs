@@ -115,6 +115,15 @@ namespace SatelliteTec.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult VisitAsigned(string id)
+        {
+            var uservisit = from v in db.Visits
+                            where v.ApplicationUser.Id == id
+                            select v;
+            return View(uservisit);
+
+        }
 
         protected override void Dispose(bool disposing)
         {

@@ -6,7 +6,7 @@ using System.Web;
 
 namespace SatelliteTec.Models
 {
-    public class Pro_Alm
+    public class ProAlm
     {
         public int Id { get; set; }
         public Almacen Almacen { get; set; }
