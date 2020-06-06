@@ -148,12 +148,12 @@ namespace SatelliteTec.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public  ActionResult Register(RegisterViewModel model)
+        public  ActionResult Register(RegisterViewModel model,string Roles)
         {
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                Utilities.CreateUserAsp(user.Email, model.Password, "Owner");
+                Utilities.CreateUserAsp(user.Email, model.Password, Roles);
 
 
                 return RedirectToAction("Index", "Home");

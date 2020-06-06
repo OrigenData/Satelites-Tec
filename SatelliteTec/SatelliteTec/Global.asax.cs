@@ -26,6 +26,7 @@ namespace SatelliteTec
             Utilities.CheckRoles("Technical");
             Utilities.CheckRoles("Logistic");
             Utilities.CheckRoles("Supplier");
+            Utilities.CheckRoles("Almacenist");
         }
     }
 }

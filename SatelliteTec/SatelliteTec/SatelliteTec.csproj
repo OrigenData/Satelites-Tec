@@ -189,7 +189,7 @@
     <Compile Include="Models\Almacen.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Pro-Alm.cs" />
+    <Compile Include="Models\ProAlm.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\Visit.cs" />
@@ -383,6 +383,7 @@
     <Content Include="Views\Almacens\Details.cshtml" />
     <Content Include="Views\Almacens\Edit.cshtml" />
     <Content Include="Views\Almacens\Index.cshtml" />
+    <Content Include="Views\Visits\VisitAsigned.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
