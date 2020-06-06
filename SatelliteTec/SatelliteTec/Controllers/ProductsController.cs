@@ -8,11 +8,14 @@ using System.Web;
 using System.Web.Mvc;
 using SatelliteTec.Models;
 
+
 namespace SatelliteTec.Controllers
 {
     [Authorize]
+    
     public class ProductsController : Controller
     {
+        
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Products
